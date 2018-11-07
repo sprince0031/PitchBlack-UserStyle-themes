@@ -1,0 +1,143 @@
+
+/* Google Search*/
+@-moz-document regexp("https?://(www|encrypted|images|translate|accounts|books|photos).google.(com|([a-z]{2}))(.[a-z]{2})?/(?!mobile|flights|intl|alerts|finance|calendar|nexus|contacts|services|voice|business|maps|dashboard|settings|android|adsense|analytics|doodles|chrome|fonts|patents|translate_p|recaptcha).*") {
+  html, body {
+      	background: /*[[bg]]*/ !important;
+      	color: #eee !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      	color: /*[[color]]*/ !important;
+  }
+
+  a {
+      	color: /*[[color]]*/ !important;
+  }
+
+  #hdtbSum, #topabar, .sfbgg {
+      background: /*[[bg]]*/ !important;
+  }
+
+  #sb_ifc0, .sbibod {
+      background: /*[[color]]*/ !important;
+      color: /*[[bg]]*/ !important;
+  }
+  
+  .Q8LRLc {
+    	background: /*[[color]]*/ !important;
+      	color: /*[[bg]]*/ !important;
+    	padding: 2px 1px !important;
+  }
+
+  .sbib_a, .sbsb_a, .RNNXgb, .aajZCb { /*new search*/
+      background: /*[[color]]*/ !important;
+      color: /*[[bg]]*/ !important;
+  }
+
+  .sbico svg {
+      color: /*[[bg]]*/ !important;
+  }
+  
+  .gb_Eg .gb_Qc a {
+      	color: /*[[bg]]*/ !important;
+      	background: /*[[color]]*/ !important;
+      	border: none;
+  }
+  
+  .gb_Eg .gb_Qc a:hover {
+    	background: /*[[bg]]*/ !important;
+    	color: /*[[color]]*/ !important;
+    	border-color: /*[[color]]*/ !important;
+    	cursor: pointer;
+  }
+  
+  
+  .jsb center input, .FPdoLc center input {
+    	background: /*[[color]]*/ !important;
+    	color: /*[[bg]]*/ !important;
+    	border-color: /*[[bg]]*/ !important;
+    	transition: 0.2s;
+    	border-radius: 20%, 25% !important;
+  }
+  
+  .jsb center input:hover, .FPdoLc center input:hover {
+    	background: /*[[bg]]*/ !important;
+    	color: /*[[color]]*/ !important;
+    	border-color: /*[[color]]*/ !important;
+    	cursor: pointer;
+  }
+  
+  #fbar {
+      	background: /*[[bg]]*/;
+    	border-top: solid 1px /*[[color]]*/ !important;
+  }
+  
+  .b2hzT {
+    	border-bottom: none;
+  }
+  
+  .garHBe {
+    	color: #eee !important;
+  }
+  
+  .garHBe:visited {
+    	color: /*[[color]]*/;
+  }
+  
+  /*
+  * accounts.google.com
+ */
+  
+  .yDmH0d {
+    	background: /*[[bg]]*/ !important;
+  }
+  
+  #initialView {
+    	background: /*[[bg]]*/ !important;
+  }
+  
+  .GyDlGb {
+    	border-color: /*[[color]]*/;
+  }
+  
+  #profileIdentifier {
+    	color: #eee;
+  }
+  
+  .byb8te path:first-child {
+    	fill: /*[[color]]*/;
+  }
+  
+  .GyDlGb:hover {
+    	background: /*[[color]]*/;
+  }
+  
+  .GyDlGb:hover #profileIdentifier, .GyDlGb:hover .byb8te path:first-child{
+    	color: /*[[bg]]*/;
+    	fill: /*[[bg]]*/;
+  }
+  
+  #forgotPassword .RveJvd {
+    	color: /*[[color]]*/;
+  }
+  
+  #forgotPassword:hover {
+    	background: /*[[bg]]*/;
+  }
+  
+  #passwordNext {
+    	color: /*[[bg]]*/;
+    	background: /*[[color]]*/;
+  }
+  
+  .Vm0pGe {
+    	background: /*[[bg]]*/;
+  }
+  
+  .RCum0c .C5uAFc:hover {
+    	background: /*[[color]]*/ !important;
+    	color: /*[[bg]]*/;
+  }
+  
+  
+}
