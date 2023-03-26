@@ -2,11 +2,11 @@
 
 ![Recreation of the original screenshot for the first version of the YouTube theme uploaded in September 2018](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/screenshots/PitchBlack_ForOldTimes_ReadmeSS.png)
   
-Inspired by the legendary PitchBlack Substratum theme for Android (back when good dark themes din't really exist natively), this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available [below](https://github.com/sprince0031/PitchBlack-UserStyle-themes/edit/master/README.md#theme-colour-codes) along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!  
+Inspired by the legendary PitchBlack Substratum theme for Android (back when good dark themes din't really exist natively), this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent colour of your choice! A list of all PitchBlack accents and background variants are available [below](https://github.com/sprince0031/PitchBlack-UserStyle-themes/blob/master/README.md#theme-colour-codes) along with their hexcodes. Do note that you can pick any colour you want from the colour picker but these are the official colours. Enjoy!  
 
 ## Theme Colour Codes
 
-Choose one [accent color](https://github.com/sprince0031/PitchBlack-UserStyle-themes/edit/master/README.md#accent-colours) and one [background colour](https://github.com/sprince0031/PitchBlack-UserStyle-themes/edit/master/README.md#background-colours) from the codes below to get a theme! You can copy and paste these codes in the respective fields in the Stylus colour picker. See the [how to install section](https://github.com/sprince0031/PitchBlack-UserStyle-themes/edit/master/README.md#how-to-install) below for instructions.
+Choose one [accent colour](https://github.com/sprince0031/PitchBlack-UserStyle-themes/blob/master/README.md#accent-colours) and one [background colour](https://github.com/sprince0031/PitchBlack-UserStyle-themes/blob/master/README.md#background-colours) from the codes below to get a theme! You can copy and paste these codes in the respective fields in the Stylus colour picker. See the [how to install section](https://github.com/sprince0031/PitchBlack-UserStyle-themes/blob/master/README.md#how-to-install) below for instructions.
 
 ### Background colours:
 
@@ -57,8 +57,8 @@ Sunrise - `#AD2C3D`
 NightBlue - `#48659B`  
 
 For a special Chocolate Theme, use the combination below!
-DarkChocolate (accent color) - `#6D4C41`  
-BitterSweet (background color) - `#110B09`  
+DarkChocolate (accent colour) - `#6D4C41`  
+BitterSweet (background colour) - `#110B09`  
 
 ## Links to my themes
 
