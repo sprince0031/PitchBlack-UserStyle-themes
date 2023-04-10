@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `<p bgcolor="#000" color="#fff"><u><b>*TURN ON DARK MODE IN YOUTUBE BEFORE APPLYING THIS THEME*</b></u></p>Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!*P.S Pssst..!! Do rate and share the theme if you liked it. :D`
-@version        20230327.15.17
+@version        20230410.2.1
 @license        CC-BY-SA-4.0
 @preprocessor   uso
 @advanced color bg "Background Color" #000000
@@ -14,6 +14,7 @@
 	transparency-enabled "Enabled*" <<<EOT :root {
 --yt-spec-raised-background: none !important;
     --yt-spec-menu-background: none !important;
+    --paper-listbox-background-color:  /*[[tpbg]]*\/ !important;
 }
 
 ytd-masthead[darker-dark-theme] #background.ytd-masthead, #background.ytd-masthead {
@@ -158,6 +159,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         --yt-spec-suggested-action: transparent !important;
         --paper-tabs-selection-bar-color: /*[[color]]*/
         !important;
+        --yt-spec-static-overlay-background-brand: /*[[color]]*/ !important;
     }
 
     html,
@@ -1276,6 +1278,18 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
 
     .ytp-swatch-background-color {
         background-color: /*[[color]]*/;
+    }
+  
+    .ytp-live-badge[disabled]:before {
+        background: /*[[color]]*/;
+    }
+  
+    .badge-style-type-live-now-alternate.ytd-badge-supported-renderer, ytd-thumbnail-overlay-time-status-renderer[overlay-style=LIVE] {
+        color: /*[[bg]]*/;
+    }
+  
+    .badge-style-type-live-now-alternate.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer svg path, ytd-thumbnail-overlay-time-status-renderer[overlay-style=LIVE] yt-icon.ytd-badge-supported-renderer svg path{
+        fill: /*[[bg]]*/;  
     }
 
     .ad-interrupting .ytp-play-progress.ytp-swatch-background-color {
