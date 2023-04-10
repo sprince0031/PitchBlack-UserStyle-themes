@@ -1,5 +1,9 @@
 # Changelog:
 
+### v2.1
+- Fixed live badge theming inconsistency on thumbnails and in video meta content.
+- Themed live dot on the video player controls section to the accent colour.
+
 ## v2.0 
 ### NEW TRANSPARENCY MODE!
 Visiting my theme to fix the bugs after years got me thinking about how I could enhance it a bit. Make it a bit more interesting. So here we are! The transparency mode themes a lot of the UI elements with a translucent frosted glass effect. UI elements that have gotten this effect are as follows:
