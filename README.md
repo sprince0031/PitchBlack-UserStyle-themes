@@ -1,6 +1,6 @@
 # PitchBlack themes for the web.
 
-![Recreation of the original screenshot for the first version of the YouTube theme uploaded in September 2018](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/screenshots/PitchBlack_ForOldTimes_ReadmeSS.png)
+![Recreation of the original screenshot for the first version of the YouTube theme uploaded in September 2018](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/YouTube/screenshots/PitchBlack_ForOldTimes_ReadmeSS.png)
   
 Inspired by the legendary PitchBlack Substratum theme for Android (back when good dark themes din't really exist natively), this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent colour of your choice! A list of all PitchBlack accents and background variants are available [below](https://github.com/sprince0031/PitchBlack-UserStyle-themes/blob/master/README.md#theme-colour-codes) along with their hexcodes. Do note that you can pick any colour you want from the colour picker but these are the official colours. Enjoy!  
 
