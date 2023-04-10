@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.6
+Bonus! Themed Apple TV+ as well. :)
+![PitchBlack theme for Apple TV+](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/Apple/screenshots/PitchBlack-AppleTV+.png)
+- Removed unnecessary padding to the sides on the home page.
+- Made title bar translucent like the Apple Music player bar.
+
 ### v0.5
 - Themed selected items in the library's artist and songs pages.
 - Themed side panels for lyrics and up next queue!
@@ -18,7 +24,7 @@
 ### v0.2
 - Playlist/album pages themed with select highlight theming according to accent.
 - Themed UI elements on selected song to be the background colour for contrast.
-![Themed UI of a selected song in a playlist](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/AppleMusic/screenshots/playlistSelectedSong.png)
+![Themed UI of a selected song in a playlist](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/Apple/screenshots/playlistSelectedSong.png)
 - Themed the lyrics and up next toggle buttons on the top player. Still need to theme the actual panes.
 
 ### v0.1
