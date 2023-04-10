@@ -71,7 +71,7 @@ BitterSweet (background colour) - `#110B09`
 ### Apple Music
 [UserStyles.world](https://userstyles.world/style/9077/pitchblack-apple-music-edition)  
   
-![PitchBlack theme for Apple Music - Screenshot 1](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/52ce73ee24bad38c1e9c12ed9e4e9a84bfc7aef7/screenshots/PitchBlack-AppleMusic.png)
+![PitchBlack theme for Apple Music - Screenshot 1](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/screenshots/PitchBlack-AppleMusic.png)
 
 
 ### How to install?
