@@ -335,6 +335,10 @@
     .canvas {
         max-width: none;
     }
+
+    .loading-inner {
+        margin-top: -52px;
+    }
     
     /* Modal elements */
     
