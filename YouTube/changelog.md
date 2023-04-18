@@ -1,5 +1,8 @@
 # Changelog:
 
+### v2.2
+- Fixed inconsistencies in the live chat UI.
+
 ### v2.1
 - Fixed live badge theming inconsistency on thumbnails and in video meta content.
 - Themed live dot on the video player controls section to the accent colour.

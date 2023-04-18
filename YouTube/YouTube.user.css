@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `<p bgcolor="#000" color="#fff"><u><b>*TURN ON DARK MODE IN YOUTUBE BEFORE APPLYING THIS THEME*</b></u></p>Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!*P.S Pssst..!! Do rate and share the theme if you liked it. :D`
-@version        20230410.2.1
+@version        20230419.2.2
 @license        CC-BY-SA-4.0
 @preprocessor   uso
 @advanced color bg "Background Color" #000000
@@ -63,6 +63,11 @@ ytd-voice-search-dialog-renderer[dialog] {
     backdrop-filter: blur(10px) saturate(100%) !important;
 }
 
+#inner.yt-live-chat-dialog-renderer, #overlay-dialog.yt-live-chat-renderer>*.yt-live-chat-renderer {
+    background-color: /*[[tpbg]]*\/;
+    backdrop-filter: blur(35px) saturate(100%);
+}
+
 .ytd-miniplayer #info-bar {
     background: /*[[tpbg]]*\/ !important;
 } EOT;
@@ -89,6 +94,10 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
 
 .sbdd_b {
     	background-color: /*[[bg]]*\/ !important;
+}
+
+#inner.yt-live-chat-dialog-renderer, #overlay-dialog.yt-live-chat-renderer>*.yt-live-chat-renderer {
+    background-color: /*[[bg]]*\/;
 }
 
 .ytd-miniplayer #info-bar {
@@ -1001,9 +1010,21 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         fill: /*[[color]]*/;
         opacity: 0.3;
     }
+    
+    #show-more.yt-live-chat-item-list-renderer {
+        background-color: /*[[color]]*/;
+    }
 
-    yt-icon[icon="down-arrow"].style-scope.yt-live-chat-item-list-renderer {
+    #show-more.yt-live-chat-item-list-renderer button.yt-icon-button {
         color: /*[[bg]]*/;
+    }
+
+    yt-live-chat-super-sticker-preview-renderer:not([modern]) #buy-button.yt-live-chat-super-sticker-preview-renderer yt-button-renderer #button.yt-button-renderer {
+        color: /*[[bg]]*/;
+    }
+
+    yt-live-chat-message-buy-flow-renderer #confirm_button yt-button-renderer.style-primary[is-paper-button], #overlay-dialog.yt-live-chat-renderer>*.yt-live-chat-renderer #action-button yt-button-renderer.style-primary[is-paper-button] {
+        background-color: transparent;
     }
 
     .yt-animated-icon lottie-component svg g g:nth-child(2) g path {
