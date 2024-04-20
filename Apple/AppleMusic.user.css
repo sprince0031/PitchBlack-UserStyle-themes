@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for Apple Music. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!If you liked this theme, checkout my PitchBlack theme for YouTube here:https://userstyles.org/styles/165645/youtube-pitchblack-dark-black-theme`
-@version        20240420.0.6.1
+@version        20240420.0.6.2
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 @advanced color accent "Accent" #23cf5f
@@ -350,11 +350,11 @@
 
     /* Country select */
     .dropdown-select-item.svelte-1qvnt96.svelte-1qvnt96:hover {
-        color: var(--pageBG);
+        color: var(--pageBG) !important;
     }
 
     .dropdown-select-item.svelte-1qvnt96.svelte-1qvnt96:hover .chevron {
-        fill: var(--pageBG);
+        fill: var(--pageBG) !important;
     }
 
     .select-button.svelte-1qvnt96.svelte-1qvnt96 {
@@ -384,6 +384,10 @@
 
     .search-hints__hint:focus .search-hints__hint-icon, .search-hints__hint:hover .search-hints__hint-icon {
         fill: var(--pageBG);
+    }
+
+    .search-hints__hint:focus .search-hints__hint-text, .search-hints__hint:hover .search-hints__hint-text {
+        color: var(--pageBG);
     }
     
     /* Parental control banner */
