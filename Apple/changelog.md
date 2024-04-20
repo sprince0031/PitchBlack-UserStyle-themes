@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.6.1
+### v0.6.1-v0.6.2
 Minor fixes to Apple TV+
 - Fixed theme issues on the free trial banner.
 - Made button theming more consistent.
