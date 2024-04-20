@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.6.1
+Minor fixes to Apple TV+
+- Fixed theme issues on the free trial banner.
+- Made button theming more consistent.
+- Fixed theme consistency on search result hover events.
+
 ### v0.6
 Bonus! Themed Apple TV+ as well. :)
 ![PitchBlack theme for Apple TV+](https://github.com/sprince0031/PitchBlack-UserStyle-themes/raw/master/Apple/screenshots/PitchBlack-AppleTV+.png)

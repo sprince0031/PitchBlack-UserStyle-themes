@@ -54,8 +54,10 @@
         border-top: solid 1px var(--keyColor);
     }
   
+    /* Button text */
     .select-button,
-    button.click-action {
+    button.click-action,
+    .button.socialProfileButton button {
         color: var(--pageBG) !important;
     }
   
@@ -345,20 +347,78 @@
     .content-modal {
         backdrop-filter: blur(50px) saturate(100%);
     }
-    
-    /* Search */
-    
-    .search-hints__hint:focus .search-hints__hint-text {
+
+    /* Country select */
+    .dropdown-select-item.svelte-1qvnt96.svelte-1qvnt96:hover {
         color: var(--pageBG);
     }
+
+    .dropdown-select-item.svelte-1qvnt96.svelte-1qvnt96:hover .chevron {
+        fill: var(--pageBG);
+    }
+
+    .select-button.svelte-1qvnt96.svelte-1qvnt96 {
+        color: var(--pageBG);
+    }
+
+    .select-button.svelte-1qvnt96:hover {
+        background-color: var(--pageBG);
+        color: var(--keyColor);
+        border: 1px solid var(--keyColor);
+    }
     
-    .search-hints__hint:focus svg path {
+    /* Search */
+    .search-hints.is-visible {
+        backdrop-filter: blur(400px) saturate(100%);
+    }
+    
+    .search-hints__top-result:focus, .search-hints__top-result:focus-within, .search-hints__top-result:hover {
+        background-color: var(--tpBG);
+    }
+
+    .search-hints__top-result:focus .search-card__text, .search-hints__top-result:focus .search-card__text--subheader, 
+    .search-hints__top-result:focus-within .search-card__text, .search-hints__top-result:focus-within .search-card__text--subheader, 
+    .search-hints__top-result:hover .search-card__text, .search-hints__top-result:hover .search-card__text--subheader {
+        color: var(--keyColor);
+    }
+
+    .search-hints__hint:focus .search-hints__hint-icon, .search-hints__hint:hover .search-hints__hint-icon {
         fill: var(--pageBG);
     }
     
     /* Parental control banner */
     .parental-control-banner {
         background-color: var(--pageBG);
+    }
+
+    /* Epic stage */
+    .epic-stage .epic-stage__content .product-header__video-control__container {
+        bottom: 75px;
+    }
+
+    .video-data-services-button:hover {
+        background-color: var(--pageBG);
+        color: var(--keyColor);
+    }
+
+    /* Free trial upsell banner */
+    .upsell-banner {
+        background-color: var(--tpBG);
+        backdrop-filter: blur(50px) saturate(10);
+    }
+
+    .upsell-banner__text a {
+        color: var(--keyColor);
+    }
+
+    .upsell-banner__button {
+        background-color: var(--keyColor);
+    }
+
+    .upsell-banner__button:hover {
+        background-color: var(--tpBG);
+        color: var(--keyColor);
+        border: 1px solid var(--keyColor);
     }
 }
   
