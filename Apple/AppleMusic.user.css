@@ -85,7 +85,7 @@
         background: var(--tpBG) !important;
         backdrop-filter: blur(20px) saturate(100%);
     }
-
+  
     /* Button text */
     .select-button,
     button.click-action,
@@ -453,7 +453,7 @@
     .search-hints__hint:hover .search-hints__hint-text {
         color: var(--pageBG);
     }
-
+  
     /* Parental control banner */
     .parental-control-banner {
         background-color: var(--pageBG);
