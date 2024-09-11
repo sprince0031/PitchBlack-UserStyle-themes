@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.6.3
+- Fixed previously broken frosted glass effect on player.
+- Fixed broken song name colour when song was highlighted/selected in a playlist.
+- Themed scroll bars.
+- Fixed inconsistent theming on "up next" side panel.
+- Minor theming inconsistencies fixed in general
+
 ### v0.6.1-v0.6.2
 Minor fixes to Apple TV+
 - Fixed theme issues on the free trial banner.
@@ -17,7 +24,7 @@ Bonus! Themed Apple TV+ as well. :)
 - Themed side panels for lyrics and up next queue!
 
 ### v0.4
-- Figured out how to make the centre player infor part of the top bar to also be transparent.
+- Figured out how to make the centre player info part of the top bar to also be transparent.
 - Themed all explicit badges.
 - Added frosted glass translucent effect on pop up modal boxes.
 - Fixed artist by-line not being themed to bg colour on a selected row.
@@ -37,5 +44,5 @@ Bonus! Themed Apple TV+ as well. :)
 Initial release! Following main UI elements were themed.
 - Background for all pages listed in the side pane
 - Music player bar (except for the track info pane in the middle)
-- County selector banner and drop-down list.
+- Country selector banner and drop-down list.
 - Upsell banner before signing in.
