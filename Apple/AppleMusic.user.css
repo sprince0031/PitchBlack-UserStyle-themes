@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for Apple Music. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!If you liked this theme, checkout my PitchBlack theme for YouTube here:https://userstyles.org/styles/165645/youtube-pitchblack-dark-black-theme`
-@version        20240911.0.6.3
+@version        20240918.0.6.4
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 @advanced color accent "Accent" #23cf5f
@@ -85,7 +85,7 @@
         background: var(--tpBG) !important;
         backdrop-filter: blur(20px) saturate(100%);
     }
-
+  
     /* Button text */
     .select-button,
     button.click-action,
@@ -110,6 +110,49 @@
 
     .app-container.is-not-focused .search-scope-bar {
         background-color: var(--pageBG) !important;
+    }
+  
+    /* Search result items */
+    /* Search hint looking glass SVG icon */
+    .search-hint:focus-visible .search-suggestion-svg path, 
+    .search-hint:focus-within .search-suggestion-svg path, 
+    .search-hint:hover .search-suggestion-svg path {
+        fill: var(--pageBG);  
+    }
+    
+    /* Autocomplete suggestion */
+    .search-hint:focus-visible .suggestion span, 
+    .search-hint:focus-within .suggestion span, 
+    .search-hint:hover .suggestion span {
+        color: var(--tpBG);  
+    }
+  
+    /* Autocomplete suggestion (typed) */
+    .search-hint:focus-visible .suggestion .highlighted, 
+    .search-hint:focus-within .suggestion .highlighted, 
+    .search-hint:hover .suggestion .highlighted {
+        color: var(--pageBG);  
+    }
+  
+    /* Item suggestion - Main title */
+    .search-hint:focus-visible .top-search-list-lockup__content .top-search-list-lockup__description li span, 
+    .search-hint:focus-within .top-search-list-lockup__content .top-search-list-lockup__description li span, 
+    .search-hint:hover .top-search-list-lockup__content .top-search-list-lockup__description li span {
+        color: var(--pageBG);
+    }
+  
+    /* Item suggestion - Secondary info */
+    .search-hint:focus-visible .top-search-list-lockup__content .top-search-list-lockup__description li.top-search-list-lockup__secondary span, 
+    .search-hint:focus-within .top-search-list-lockup__content .top-search-list-lockup__description li.top-search-list-lockup__secondary span, 
+    .search-hint:hover .top-search-list-lockup__content .top-search-list-lockup__description li.top-search-list-lockup__secondary span {
+        color: var(--tpBG);
+    }
+  
+    /* Item suggestion - Icons (eg: explicit icon) */
+    .search-hint:focus-visible .top-search-list-lockup__content .top-search-list-lockup__icon svg path, 
+    .search-hint:focus-within .top-search-list-lockup__content .top-search-list-lockup__icon svg path, 
+    .search-hint:hover .top-search-list-lockup__content .top-search-list-lockup__icon svg path {
+        fill: var(--tpBG);  
     }
 
     /* Player UI */
@@ -276,6 +319,7 @@
         color: var(--keyColor) !important;
     }
 
+    /* Song list items */
     .songs-list-row--selected:not(.songs-list-row--disabled) .songs-list__col .songs-list-row__controls .songs-list-row__preview-button button.click-action {
         color: var(--pageBG) !important;
     }
@@ -298,8 +342,10 @@
     }
 
     .songs-list-row--selected:not(.songs-list-row--disabled) .songs-list__col .songs-list__song-link-wrapper a,
-    .songs-list-row--selected .songs-list__col .songs-list__song-link-wrapper a:hover {
+    .songs-list-row--selected .songs-list__col .songs-list__song-link-wrapper a:hover,
+    .songs-list-row--selected .songs-list-row__song-name a:hover {
         color: var(--pageBG) !important;
+        text-decoration-color: var(--pageBG) !important;
     }
 
     .songs-list-row--selected:not(.songs-list-row--disabled) .songs-list__col .songs-list-row__song-wrapper {
@@ -453,7 +499,7 @@
     .search-hints__hint:hover .search-hints__hint-text {
         color: var(--pageBG);
     }
-
+  
     /* Parental control banner */
     .parental-control-banner {
         background-color: var(--pageBG);
