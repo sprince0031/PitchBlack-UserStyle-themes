@@ -1,5 +1,8 @@
 # Changelog
 
+### v0.6.4
+- Fixed search result items' text and icons not being themed on hover.
+
 ### v0.6.3
 - Fixed previously broken frosted glass effect on player.
 - Fixed broken song name colour when song was highlighted/selected in a playlist.
