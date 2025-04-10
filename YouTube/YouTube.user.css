@@ -3,13 +3,15 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `<p bgcolor="#000" color="#fff"><u><b>*TURN ON DARK MODE IN YOUTUBE BEFORE APPLYING THIS THEME*</b></u></p>Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!*P.S Pssst..!! Do rate and share the theme if you liked it. :D`
-@version        20230419.2.2
+@version        20250410.2.3
+@homepageURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes
+@supportURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes/issues
 @license        CC-BY-SA-4.0
 @preprocessor   uso
 @advanced color bg "Background Color" #000000
 @advanced color color "Accent Color" #ff0000
 @advanced color tpac "Transparency Effects (Accent)" #ff000075
-@advanced color tpbg "Transparency Effects (background)" #000000a6
+@advanced color tpbg "Transparency Effects (background)" #000000c7
 @advanced dropdown transparency-toggle "Transparency Effects" {
 	transparency-enabled "Enabled*" <<<EOT :root {
 --yt-spec-raised-background: none !important;
@@ -40,8 +42,17 @@ ytd-voice-search-dialog-renderer[dialog] {
     background-color: /*[[tpac]]*\/;  
 }
 
+.ytSearchboxComponentInputBox {
+        background: none;
+}
+
+.ytSearchboxComponentSuggestionsContainer {
+        background: /*[[tpbg]]*\/;
+        backdrop-filter: blur(50px) saturate(100%) !important;
+}  
+
 .ytd-popup-container {
-    backdrop-filter: blur(50px) saturate(150%) !important;
+    backdrop-filter: blur(50px) saturate(150%) !important;#3b3f60
 }
 
 .sbdd_b {
@@ -87,6 +98,10 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
 #microphone-levels.ytd-voice-search-dialog-renderer {
     background-color: /*[[color]]*\/;  
 }
+
+.ytSearchboxComponentSuggestionsContainer {
+        background: /*[[bg]]*\/;
+}  
 
 .ytd-popup-container {
     	background: /*[[bg]]*\/ !important;
@@ -223,7 +238,23 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     yt-icon#logo-icon svg g g#youtube-red-paths path {
         fill: white;
     }
-
+  
+    /*   Search box   */  
+    .ytSearchboxComponentInputBoxHasFocus {
+        border-color: /*[[color]]*/ !important;
+    }
+  
+    /*   Search button   */  
+    .ytSearchboxComponentSearchButton:hover svg {
+        fill: /*[[bg]]*/;
+    }
+  
+    .ytSearchboxComponentSearchButton:hover {
+        background: /*[[color]]*/;
+    }
+  
+  
+    /*   voice search   */
     #voice-search-button yt-icon-shape svg,
     #voice-search-button yt-icon svg {
         color: /*[[color]]*/
@@ -301,10 +332,6 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     /* Feed category suggestions */
-    yt-chip-cloud-chip-renderer {
-        font-weight: bold;
-    }
-
     ytd-feed-filter-chip-bar-renderer svg,
     .yt-chip-cloud-renderer .yt-spec-button-shape-next svg {
         fill: /*[[color]]*/;
@@ -339,21 +366,28 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         background: linear-gradient(to right, /*[[bg]]*/
         10%, rgba(24, 24, 24, 0) 90%) !important;
     }
-
-    yt-chip-cloud-chip-renderer.style-scope.iron-selected {
-        background-color: /*[[color]]*/;
+  
+    yt-chip-cloud-chip-renderer {
+        border: none !important;
+        border-radius: 25%/25%;
+    }
+  
+    yt-chip-cloud-chip-renderer[selected] #chip-container.yt-chip-cloud-chip-renderer,
+    yt-chip-cloud-chip-renderer[selected] #chip-container.yt-chip-cloud-chip-renderer:active {
+      background-color: /*[[color]]*/ !important;
+    }
+  
+    yt-chip-cloud-chip-renderer[selected] #chip-container.yt-chip-cloud-chip-renderer:hover {
+      background-color: /*[[bg]]*/;
+      color: /*[[color]]*/;
+    }
+  
+    yt-chip-cloud-chip-renderer #chip-container.yt-chip-cloud-chip-renderer:hover {
+      background-color: /*[[bg]]*/ !important;
+      color: /*[[color]]*/;
     }
 
-    yt-chip-cloud-chip-renderer.style-scope.iron-selected:focus {
-        background-color: /*[[color]]*/;
-    }
-
-    yt-chip-cloud-chip-renderer.style-scope.iron-selected:hover {
-        background-color: /*[[bg]]*/;
-        color: /*[[color]]*/;
-        border: solid 1px/*[[color]]*/;
-    }
-
+    /*  In-video elements  */
     #time.ytd-macro-markers-list-item-renderer {
         background-color: /*[[color]]*/
         !important;
@@ -543,12 +577,12 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         text-decoration: underline;
     }
 
-    yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"],
+/*     yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"],
     yt-chip-cloud-chip-renderer[chip-style="STYLE_HOME_FILTER"] {
         border: 1px solid/*[[color]]*/;
-        color: /*[[color]]*/;
-        background: /*[[bg]]*/;
-    }
+/*         color: /*[[color]]*/;
+/*         background: /*[[bg]]*/;
+/*     } */
 
     .masthead-finish {
         border-bottom: 1px solid/*[[color]]*/
@@ -1053,28 +1087,6 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         background: var(--yt-spec-icon-active-button-link) !important;
     }
 
-    .ytd-searchbox .yt-icon {
-        color: /*[[bg]]*/
-        !important;
-    }
-
-    ytd-searchbox[has-focus] #container.ytd-searchbox {
-        border: solid 1px/*[[color]]*/
-        !important;
-    }
-
-    #search-input.ytd-searchbox-spt input::selection {
-        color: /*[[bg]]*/;
-        background-color: /*[[color]]*/;
-    }
-
-    yt-icon.style-scope.ytd-searchbox svg {
-        fill: /*[[color]]*/;
-    }
-
-    button#search-icon-legacy:hover yt-icon.style-scope.ytd-searchbox svg {
-        fill: /*[[bg]]*/;
-    }
 
     #search-form button:hover .yt-icon {
         color: /*[[color]]*/

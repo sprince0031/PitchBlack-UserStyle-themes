@@ -1,5 +1,13 @@
 # Changelog:
 
+### v2.3
+- Fixed selected category being white.
+- Fixed search icon not being themed.
+- Added transparency effect to search input.
+
+**Known issues:**
+- Frosted glass effect not visible on search box suggestions pane.
+
 ### v2.2
 - Fixed inconsistencies in the live chat UI.
 
