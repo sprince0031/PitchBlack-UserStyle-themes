@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `<p bgcolor="#000" color="#fff"><u><b>*TURN ON DARK MODE IN YOUTUBE BEFORE APPLYING THIS THEME*</b></u></p>Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!*P.S Pssst..!! Do rate and share the theme if you liked it. :D`
-@version        20250410.2.3
+@version        20250508.2.4
 @homepageURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes
 @supportURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes/issues
 @license        CC-BY-SA-4.0
@@ -1325,9 +1325,9 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         fill: /*[[bg]]*/;  
     }
 
-    .ad-interrupting .ytp-play-progress.ytp-swatch-background-color {
-        background: /*[[bg]]*/;
-        border: solid 1px/*[[color]]*/;
+    .ytp-play-progress,
+    .ytp-progress-linear-live-buffer {
+        background: /*[[color]]*/;
     }
 
     .ytp-ad-persistent-progress-bar {
@@ -1355,11 +1355,6 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         background: /*[[color]]*/;
         border-color: /*[[color]]*/;
         color: /*[[bg]]*/;
-    }
-
-    .ytp-menuitem .ytp-menuitem-toggle-checkbox {
-        background: /*[[color]]*/
-        !important;
     }
 
     .ytp-swatch-color {
