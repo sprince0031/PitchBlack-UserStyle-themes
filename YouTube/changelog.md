@@ -1,4 +1,10 @@
 # Changelog:
+### v2.4
+- Fixed the video progress bar colour not being themed.
+- Fixed issue with loop check mark icon being blown out with accent colour as background.
+
+**Known issues:**
+- Frosted glass effect not visible on search box suggestions pane.
 
 ### v2.3
 - Fixed selected category being white.
