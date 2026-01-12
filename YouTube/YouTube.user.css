@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `<p bgcolor="#000" color="#fff"><u><b>*TURN ON DARK MODE IN YOUTUBE BEFORE APPLYING THIS THEME*</b></u></p>Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for YouTube. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!*P.S Pssst..!! Do rate and share the theme if you liked it. :D`
-@version        20250508.2.4
+@version        20260112.2.5
 @homepageURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes
 @supportURL	https://github.com/sprince0031/PitchBlack-UserStyle-themes/issues
 @license        CC-BY-SA-4.0
@@ -28,7 +28,8 @@ div#masthead-container {
     backdrop-filter: blur(10px) saturate(100%) !important;
 }
 
-ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-renderer,
+#chips.ytd-feed-filter-chip-bar-renderer{
   	background-color: /*[[tpbg]]*\/ !important;
     backdrop-filter: blur(10px) saturate(100%) !important;
 }
@@ -69,9 +70,13 @@ ytd-voice-search-dialog-renderer[dialog] {
     backdrop-filter: blur(10px) saturate(100%) !important;
 }
 
-#card.ytd-miniplayer, ytd-miniplayer {
-    background-color: none !important;
-    backdrop-filter: blur(10px) saturate(100%) !important;
+.ytdMiniplayerInfoBarHost {
+		background: none;
+}
+
+.ytdMiniplayerComponentContent {
+    background: /*[[tpbg]]*\/;
+		backdrop-filter: blur(100px) saturate(100%) !important;
 }
 
 #inner.yt-live-chat-dialog-renderer, #overlay-dialog.yt-live-chat-renderer>*.yt-live-chat-renderer {
@@ -115,8 +120,8 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     background-color: /*[[bg]]*\/;
 }
 
-.ytd-miniplayer #info-bar {
-    	background: /*[[bg]]*\/ !important;
+.ytdMiniplayerInfoBarHost {
+		background-color: /*[[bg]]*\/;
 } EOT;
 
 }
@@ -184,6 +189,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         --paper-tabs-selection-bar-color: /*[[color]]*/
         !important;
         --yt-spec-static-overlay-background-brand: /*[[color]]*/ !important;
+				--default-white-colour: #eee;
     }
 
     html,
@@ -645,6 +651,15 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     ytd-notification-renderer:hover #new.ytd-notification-renderer {
         background-color: /*[[bg]]*/;
     }
+	
+    .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+            background: /*[[bg]]*/;
+    }
+
+    .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled:hover {
+            color: /*[[bg]]*/ !important;
+            background: /*[[color]]*/;
+    }
 
     #items.yt-multi-page-menu-section-renderer > .yt-multi-page-menu-section-renderer:hover .text {
         color: /*[[bg]]*/;
@@ -681,7 +696,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     ytd-guide-entry-renderer[is-guide-refresh][is-primary] .title.ytd-guide-entry-renderer {
-        color: #eee;
+        color: var(--default-white-color);
     }
 
     ytd-guide-entry-renderer[is-guide-refresh][is-primary]:hover .title.ytd-guide-entry-renderer {
@@ -689,7 +704,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     .title.ytd-guide-entry-renderer {
-        color: #eee;
+        color: var(--default-white-color);
     }
 
     .ytd-compact-link-renderer:hover,
@@ -708,13 +723,16 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     .guide-entry-badge .yt-icon {
-        color: /*[[color]]*/
-        !important;
+        color: /*[[color]]*/ !important;
+    }
+	
+    .ytd-guide-entry-renderer {
+            color: var(--default-white-colour);	
     }
 
     ytd-guide-entry-renderer[active] {
         background: /*[[bg]]*/;
-        border-left: solid 4px/*[[color]]*/;
+        border-left: solid 4px /*[[color]]*/;
     }
 
     ytd-guide-entry-renderer[active]:hover .title.ytd-guide-entry-renderer,
@@ -764,7 +782,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     .title.ytd-mini-guide-entry-renderer {
-        color: #eee;
+        color: var(--default-white-colour);
     }
 
     ytd-mini-guide-renderer ytd-mini-guide-entry-renderer #endpoint.yt-simple-endpoint:hover,
@@ -824,6 +842,10 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     .ytp-cards-button-icon use path.ytp-svg-fill {
         fill: /*[[bg]]*/;
         stroke: /*[[color]]*/;
+    }
+	
+    .ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment {
+            background: /*[[color]]*/;
     }
 
     .ytp-cued-thumbnail-overlay button.ytp-large-play-button svg path:nth-last-child(1) {
@@ -1101,7 +1123,27 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         background: /*[[bg]]*/
         !important;
     }
+	
+    .yt-spec-avatar-shape--live-ring::after {
+            background: /*[[color]]*/;
+    }
 
+    .yt-spec-avatar-shape__live-badge {
+            background-color: /*[[color]]*/;
+    }
+
+    .yt-spec-avatar-shape__badge-text {
+            color: /*[[bg]]*/;
+    }
+
+    .yt-page-header-view-model__page-header-title h1 {
+            color: var(--default-white-colour) !important;
+    }
+
+    .yt-page-header-view-model__page-header-title h1 .yt-core-attributed-string--link-inherit-color .ytIconWrapperHost span div {
+            color: /*[[color]]*/ !important;
+    }
+	
     #channel-header-container ytd-button-renderer yt-formatted-string.ytd-button-renderer {
         color: /*[[bg]]*/;
     }
@@ -1324,11 +1366,20 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     .badge-style-type-live-now-alternate.ytd-badge-supported-renderer yt-icon.ytd-badge-supported-renderer svg path, ytd-thumbnail-overlay-time-status-renderer[overlay-style=LIVE] yt-icon.ytd-badge-supported-renderer svg path{
         fill: /*[[bg]]*/;  
     }
+	
+		.yt-badge-shape--live {
+				color: /*[[bg]]*/;
+				background: /*[[color]]*/;
+		}
 
     .ytp-play-progress,
     .ytp-progress-linear-live-buffer {
         background: /*[[color]]*/;
     }
+	
+		.ytp-livebadge-color .ytp-live-badge.ytp-live-badge-is-livehead::before {
+				background: /*[[color]]*/;
+		}
 
     .ytp-ad-persistent-progress-bar {
         background: /*[[bg]]*/;
@@ -1391,11 +1442,11 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         !important;
     }
 
-    .ytd-miniplayer #info-bar .title .miniplayer-title {
+    .ytdMiniplayerInfoBarHost .ytdMiniplayerInfoBarContent .ytdMiniplayerInfoBarTitle {
         color: #eee !important;
     }
 
-    .ytd-miniplayer #info-bar .channel #owner-name {
+    .ytdMiniplayerInfoBarHost .ytdMiniplayerInfoBarContent .ytdMiniplayerInfoBarSubtitle {
         color: /*[[color]]*/
         !important;
     }
@@ -1435,8 +1486,8 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     /* 
-  * Playlist Page
-  */
+    * Playlist Page
+    */
     ytd-browse[guide-persistent-and-visible] ytd-playlist-sidebar-renderer.ytd-browse,
     ytd-browse[mini-guide-visible] ytd-playlist-sidebar-renderer.ytd-browse {
         background: /*[[bg]]*/;
@@ -1468,7 +1519,7 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
     }
 
     ytd-playlist-panel-renderer #items-stamp #index.ytd-playlist-panel-video-renderer {
-        color: #eee;
+        color: var(--default-white-colour);
     }
 
     ytd-playlist-panel-video-renderer[selected] #index.ytd-playlist-panel-video-renderer {
@@ -1481,5 +1532,10 @@ ytd-feed-filter-chip-bar-renderer #chips-wrapper.ytd-feed-filter-chip-bar-render
         !important;
         color: /*[[color]]*/
         !important;
+    }
+	
+    /* Home page individual items */
+    .yt-lockup-metadata-view-model__text-container h3 a {
+        color: var(--default-white-colour) !important;
     }
 }
