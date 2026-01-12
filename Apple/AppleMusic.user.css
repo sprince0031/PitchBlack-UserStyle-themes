@@ -3,7 +3,7 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for Apple Music. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!If you liked this theme, checkout my PitchBlack theme for YouTube here:https://userstyles.org/styles/165645/youtube-pitchblack-dark-black-theme`
-@version        20240918.0.6.4
+@version        20240918.0.6.5
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 @advanced color accent "Accent" #23cf5f
@@ -30,8 +30,9 @@
         /*
         --playerScrubberTrack: rgba(55,55,55,0.95) !important;
         --playerScrubberFill: var(--keyColor) !important;
-        --playerLCDBGFill: rgba(45,45,45,0.95) !important;
-        */
+				*/
+        --lcd-bg-color: none;
+        --playerLCDBGFill: none;
         --iconFillArrow: var(--pageBG) !important;
         --selectionColor: var(--keyColor) !important;
         --mobileNavigationBG: var(--pageBG);
@@ -516,7 +517,8 @@
     }
 
     /* Free trial upsell banner */
-    .upsell-banner {
+    .web-banner-upsell,
+    .web-banner-upsell.svelte-1ahfn9p {
         background-color: var(--tpBG);
         backdrop-filter: blur(50px) saturate(10);
     }
@@ -525,13 +527,16 @@
         color: var(--keyColor);
     }
 
-    .upsell-banner__button {
-        background-color: var(--keyColor);
+    .upsell-banner__button,
+    button.svelte-1ahfn9p {
+    background-color: var(--tpBG);
+        color: var(--keyColor);
     }
 
-    .upsell-banner__button:hover {
-        background-color: var(--tpBG);
-        color: var(--keyColor);
+    .upsell-banner__button:hover,
+    button.svelte-1ahfn9p:hover {
+        background-color: var(--keyColor);
+        color: var(--pageBG);
         border: 1px solid var(--keyColor);
     }
 }

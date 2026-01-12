@@ -1,4 +1,12 @@
 # Changelog:
+### v2.5
+- Fixed theming for YouTube logo elements to ensure consistent accent color application.
+- Updated subscribe button styling for Shorts player with proper accent color and hover effects.
+- Themed transcript segment renderer with accent color highlights for active and hover states.
+- Fixed page header title theming for channel names and attributed strings.
+- Enhanced avatar shape theming including live ring effects and live badges.
+- Improved consistency in icon and button theming across various UI elements.
+
 ### v2.4
 - Fixed the video progress bar colour not being themed.
 - Fixed issue with loop check mark icon being blown out with accent colour as background.
