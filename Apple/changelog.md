@@ -1,5 +1,8 @@
 # Changelog
-
+### v0.6.5
+- Fixed previously broken frosted glass effect on player (AGAIN!!!).
+- Changed free trial banner for apple tv to use frosted glass effect.
+  
 ### v0.6.4
 - Fixed search result items' text and icons not being themed on hover.
 
