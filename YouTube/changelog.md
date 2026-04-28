@@ -1,4 +1,8 @@
 # Changelog:
+### v2.6
+- Fixed video titles being displayed ion accent colour instead of white.
+- Fixed active chip UI elements for content cateogories not being themed.
+  
 ### v2.5
 - Fixed theming for YouTube logo elements to ensure consistent accent color application.
 - Updated subscribe button styling for Shorts player with proper accent color and hover effects.
