@@ -3,13 +3,13 @@
 @namespace      USO Archive
 @author         sprince0031
 @description    `Inspired by the legendary PitchBlack Substratum theme for Android, this is a PitchBlack theme for Apple Music. In true PitchBlack fashion, you get to pick the accent color of your choice! A list of all PitchBlack accents and background variants are available below along with their hexcodes. Do note that you can pick any color you want from the color picker but these are the official colors. Enjoy!If you liked this theme, checkout my PitchBlack theme for YouTube here:https://userstyles.org/styles/165645/youtube-pitchblack-dark-black-theme`
-@version        20240918.0.6.5
+@version        20260716.0.6.6
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 @advanced color accent "Accent" #23cf5f
 @advanced color bg "Background" #000000
 @advanced color tpac "Transparency Effects (Accent)" #23cf5f66
-@advanced color tpbg "Transparency Effects (Background)" #00000099
+@advanced color tpbg "Transparency Effects (Background)" #00000050
 
 ==/UserStyle== */
 @-moz-document regexp("https?://(music|tv).apple.com.*")
@@ -41,6 +41,7 @@
         --dropdownLightGrayIcon: var(--keyColor);
         --opaqueShelfBG: var(--pageBG);
         --footerBg: var(--pageBG);
+        --button-pill-background-color: var(--keyColor);
 
         /* Apple TV settings */
         --appPrimaryBackgroundColor:  /*[[bg]]*/;
@@ -216,6 +217,11 @@
     .side-panel .side-panel-header-wrapper {
         background-color: var(--tpBG) !important;
     }
+	
+    /* Side nav bar items */
+    .navigation-item--selected {
+            background-color: var(--keyColor);
+    }
 
     /* Up next pane */
     .up-next-item-remove {
@@ -286,7 +292,7 @@
     /* Modal elements */
     .content-modal-container {
         background-color: var(--tpBG) !important;
-        backdrop-filter: blur(20px) saturate(100%);
+        backdrop-filter: blur(5px) saturate(100%);
     }
 
     .close-button:hover {
@@ -375,8 +381,15 @@
         color: var(--pageBG) !important;
     }
 
-    .library-track.selected .action-menu .more-button--non-platter {
+    .library-track.selected .action-menu .more-button--non-platter,
+    .songs-list-row--selected .more-button--non-platter {
         --iconEllipsisFill: var(--pageBG) !important;
+    }
+
+    .library-track.selected .library-track__badge {
+        --favoriteButtonStarOutline: var(--pageBG) !important;
+        --favoriteButtonStarOutline-hover: var(--pageBG) !important;
+        --favoriteButtonStarFill: var(--pageBG) !important;
     }
 
     /* Common library page rules*/

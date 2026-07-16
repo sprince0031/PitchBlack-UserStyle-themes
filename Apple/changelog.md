@@ -1,4 +1,8 @@
 # Changelog
+### v0.6.6
+- Fixed broken side nav pane UI after Apple Music UI overhaul.
+- Minor fixes to UI consistency issues like colours not inverting on selecting track from list, etc.
+
 ### v0.6.5
 - Fixed previously broken frosted glass effect on player (AGAIN!!!).
 - Changed free trial banner for apple tv to use frosted glass effect.
